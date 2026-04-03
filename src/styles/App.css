@@ -1,0 +1,7 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    width: clamp(320px, 90vw, 730px);
+    margin: 0 auto;
+    padding: 0 16px;
+}

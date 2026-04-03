@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.header__title {
+    text-align: center;
+    font-size: clamp(20px, 2.5vw, 26px);
+    font-weight: medium;
+    color: #fff;
+}
+
+.header__input {
+    width: 100%;
+    padding: 7px 16px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    color: #fff;
+    font-size: clamp(14px, 1.5vw, 16px);
+}
+
+.header__search {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.header__btn_filter,
+.header__btn_theme {
+    background-color: #6C63FF;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: clamp(14px, 1.5vw, 18px);
+}
+
+.header__btn_theme {
+    font-size: clamp(18px, 2vw, 24px);
+}
