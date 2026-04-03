@@ -1,24 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./Header";
 import TasksList from "./TasksList";
 
 import "../styles/App.css";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      task: "Work",
-    },
-    {
-      id: 2,
-      task: "Walk",
-    },
-    {
-      id: 3,
-      task: "GYM",
-    },
-  ]);
+  const [tasks, setTasks] = useState(() => {
+    const saved = localStorage.getItem("tasks");
+    return saved
+      ? JSON.parse(saved)
+      : [
+          { id: 1, task: "Work" },
+          { id: 2, task: "Walk" },
+          { id: 3, task: "GYM" },
+        ];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const addTasks = (newTaskText) => {
     if (!newTaskText.trim()) return;
